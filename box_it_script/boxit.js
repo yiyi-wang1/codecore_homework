@@ -104,14 +104,13 @@ if (input.length == 1 && input[0].includes(".csv")) {
                 }
             }
         }
-        console.log(resArr);
+        // console.log(resArr);
         const arr = [];
         for (row of resArr) {
             let str = row.join("\u2503");
             arr.push(str);
         }
         console.log(boxIt(arr));
-
     });
 
 } else {
