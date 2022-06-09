@@ -112,7 +112,6 @@ if (input.length == 1 && input[0].includes(".csv")) {
         }
         console.log(boxIt(arr));
     });
-
 } else {
     console.log(boxIt(process.argv.slice(2)));
 }
