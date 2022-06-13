@@ -1,3 +1,16 @@
+//Note for myself: Usually we use (r,c) to represent a point for leetcode question
+//so a point(0,4) means at row 0, column 4
+//example: 
+//□□□■
+
+//In this problem, it use (x, y) to represent a point
+//a point (0,4) means at x-axis 0, y-axis 4
+//example:
+//□
+//□
+//□
+//■
+
 //this represent east, south, west, north;
 const directions = [[1, 0], [0, 1], [-1, 0], [0, -1]];
 
