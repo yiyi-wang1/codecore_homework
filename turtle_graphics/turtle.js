@@ -169,12 +169,12 @@ if (input[0].includes("--output")) {
     } else {
         const res = drawTurtle(input[1]);
         const fs = require("fs");
-        try {
-            fs.writeFileSync(fileName, res);
+        fs.writeFile(fileName, res, err => {
+            if (err) {
+                console.err(err);
+            }
             console.log(`Drawing written to ${fileName}`);
-        } catch (err) {
-            console.error(err);
-        }
+        })
     }
 } else {
     drawTurtle(input[0]);
