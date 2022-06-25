@@ -36,7 +36,7 @@ function todo() {
                 ask();
                 break;
             case "n":
-                rl.question("What?\n", (answer) => {
+                rl.question("What?\n>", (answer) => {
                     let newItem = {};
                     newItem.title = answer;
                     newItem.completed = false;
@@ -51,7 +51,7 @@ function todo() {
                 } else {
                     item = todoList[index];
                     item.completed = true;
-
+                    console.log(`Completed ${item.title}`);
                 }
                 ask();
                 break;
@@ -69,10 +69,11 @@ function todo() {
                 ask();
                 break;
             case "s":
-                let path = "";
-                rl.question("Where?\n", function (answer) {
-                    path = answer;
-                    fs.writeFile(path, JSON.stringify(todoList))
+                rl.question("Where?\n>", function (answer) {
+                    if (!answer.includes(".")) {
+                        answer += ".json";
+                    }
+                    fs.writeFile(answer, JSON.stringify(todoList))
                         .then(console.log("File write complete!"))
                         .catch(function (error) { console.error(error) })
                     ask();
