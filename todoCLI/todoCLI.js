@@ -46,7 +46,7 @@ function todo() {
                 break;
             case "c":
                 const index = parseInt(line.slice(1));
-                if (!index) {
+                if (isNaN(index)) {
                     console.log("Please enter the command and index of item");
                 } else {
                     item = todoList[index];
@@ -57,7 +57,7 @@ function todo() {
                 break;
             case "d":
                 const index1 = parseInt(line.slice(1));
-                if (!index1) {
+                if (isNaN(index)) {
                     console.log("Please enter the command and index of item");
                 } else {
                     if (index1 > 0 && index1 < todoList.length) {
