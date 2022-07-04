@@ -70,7 +70,7 @@ router.get('/:id', (req, res) => {
                     }
                 }
             }
-            res.render('cohorts/show', { cohort: cohort, err: err, arr: arr });
+            res.render('cohorts/show', { cohort: cohort, err: err, arr: arr, teamMethod: teamMethod, quantity: quantity });
         } else {
             res.send(`Cannot find cohort with id: ${id}`);
         }

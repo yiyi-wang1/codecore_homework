@@ -15,20 +15,23 @@
                     <form action="/cohorts/<%- cohort.id %>" method="get" class="border-top">
                         <label class="my-3">Method</label>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="radio" name="teamMethod" value="Team Count">
+                            <input class="form-check-input" type="radio" name="teamMethod" value="Team Count"
+                                <%=teamMethod==='Team Count' ? 'checked' : '' %>>
                             <label class="form-check-label" for="teamMethod">
                                 Team Count
                             </label>
                         </div>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="radio" name="teamMethod" value="Number Per Team">
+                            <input class="form-check-input" type="radio" name="teamMethod" value="Number Per Team"
+                                <%=teamMethod==='Number Per Team' ? 'checked' : '' %>>
                             <label class="form-check-label" for="teamMethod">
                                 Number Per Team
                             </label>
                         </div>
                         <div class="mb-3">
                             <label for="quantity" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity">
+                            <input type="number" class="form-control" id="quantity" name="quantity"
+                                value="<%= quantity? quantity:'' %>">
                         </div>
                         <button type="submit" class="btn btn-outline-primary w-100">Assign Teams</button>
                     </form>
