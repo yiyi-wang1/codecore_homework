@@ -2,7 +2,7 @@
 
 1. Clone the repo 
 ```
-git clone 
+git clone https://github.com/yiyi-wang1/codecore_homework.git
 ```
 
 2. install NPM package
