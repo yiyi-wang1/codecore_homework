@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+    <form action="/cohorts/new" method="post">
+        <div class="mb-3 mx-3">
+            <label for="logoUrl" class="form-label">Logo Url</label>
+            <input type="text" class="form-control" id="logoUrl" name="logoUrl">
+        </div>
+        <div class="mb-3 mx-3">
+            <label for="cohort_name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="cohort_name" name="cohort_name">
+        </div>
+        <div class="mb-3 mx-3">
+            <label for="members" class="form-label">Members</label>
+            <textarea type="text" class="form-control" id="members" name="members"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mx-3">Submit</button>
+
+    </form>
+    <%- include('../partials/footer.ejs') %>
