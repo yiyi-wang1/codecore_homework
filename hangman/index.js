@@ -8,8 +8,6 @@ const winSound = new Audio("sounds/success.mp3");
 const LoseSound = new Audio("sounds/wrong.mp3");
 
 
-console.log(word);
-
 const letterContainer = document.querySelector('.letters-group');
 console.log(letterContainer)
 
