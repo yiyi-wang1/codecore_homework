@@ -257,4 +257,6 @@ bower.json
 !/storage/.keep
 /public/uploads
 
+/super_team_picker
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,node,rails
